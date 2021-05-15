@@ -1,0 +1,181 @@
+int   123 to -123
+string
+float  19.99 to -19.99
+decimal
+double
+char
+boolean
+
+Final - final int x=10;
+
+the value is never changed  shows error when value is assigned
+
+float f = 19.11f
+
+primitive data types(starting letter is always small)
+
+byte, short, int, long, float, double, boolean and char
+
+
+Data Type -	Size -	Description
+byte	- 1 byte - 	Stores whole numbers from -128 to 127
+short	 - 2 bytes -	Stores whole numbers from -32,768 to 32,767
+int	- 4 bytes	 - Stores whole numbers from -2,147,483,648 to 2,147,483,647
+long -	8 bytes	- Stores whole numbers from -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807
+float -	4 bytes	 - Stores fractional numbers. Sufficient for storing 6 to 7 decimal digits
+double -	8 bytes	 - Stores fractional numbers. Sufficient for storing 15 decimal digits
+boolean	 - 1 bit	- Stores true or false values
+char	 - 2 bytes	- Stores a single character/letter or ASCII values
+
+
+long  value should always end with  l
+ float vs double -   float -  length of decimal value  only 6 or 7
+                        double - length of decimal value is upto 15
+
+ float y = 19e5f - e indicates the (10^) 10 to the power of
+
+ char x = 'c' ; //variable directly used
+ char x = 45 ; //ascii value is expressed
+
+ ASCII value A -65
+             a - 97
+             digit 0 - 48
+
+Non-primitive types are Strings, Arrays, Classes, Interface,
+
+Coverting one form to other - CASTING
+
+Widening Casting (automatically) - converting a smaller type to a larger type size
+byte -> short -> char -> int -> long -> float -> double
+
+int x=5;
+double y =x;
+
+It will be converted from 5 to 5.0
+
+Narrowing Casting (manually) - converting a larger type to a smaller size type
+double -> float -> long -> int -> char -> short -> byte
+
+double y =5.6;
+int x= (int) y;
+
+It will be converted from 5.6 to 5
+
+Pre-increment and  Post-increment
+
+++a = returns the added value immeditely
+a++ = the vales remains same only added on next turn
+
+int a=5;
+System.out.println(a++); //returns 5
+
+int a=6;
+System.out.println(++a);//returns 7
+
+String
+
+String xx = "12345";
+System.out.println(xx.length()); //5  length starts from 1
+Position on string starts from 0 and ends at length-1
+
+SPECIAL CHARACTERS
+
+to use "" inside the String declaration
+
+String a= "I am "GOOD" boy"; //throws error
+String a="I am \"GOOD\" boy;
+
+can use \" , \' , \\
+
+\n	New Line  - prints new line
+\r	Carriage Return - rollbacks the data
+
+ String ww="I am \r GOOD  boy";
+ System.out.println(ww); //returns GOOD boy
+
+\t	Tab  -spaces between text
+\b	Backspace
+
++ is used for both  addition and concatenation , if int and string added String is he output
+
+System.out.println(10+20); //30
+System.out.println("10"+"20"); //1020
+System.out.println(10+"20"); //1020
+
+Math is function has many function like max , min ,sqrt ,abs ,random
+
+ System.out.println(Math.abs(-100)); //always positive value is written
+
+ System.out.println(Math.random()); //random value 0.0(included may come )  to 1.0(excluded)
+ System.out.println(Math.random() * 100 ); //random value 0  to 100
+
+boolean pl = true; //declaration
+ int p = 10;
+int pp = 9;
+System.out.println(p > pp)  // returns true  not 0 or 1
+
+ifelse can be replace by ternary operator (condition) ? true : false ;
+
+String result = (10 >9) ? 10 :9;
+
+Switch statement -example
+
+int day = 4;
+switch (day) {
+  case 6:
+    System.out.println("Today is Saturday");
+    break;
+  case 7:
+    System.out.println("Today is Sunday");
+    break;
+  default:
+    System.out.println("Looking forward to the Weekend");
+
+for is now not used more moving to for each
+
+String[] cars = {benz , Audi , Honda}
+for(String x : cars){
+System.out.println(x); //x should be used inside this
+}
+
+
+break vs continue
+break - breaks the entire loop (if condition  is a statement  not a loop )
+continue - skips that loop  alone and continues
+
+Arrays
+
+String[] x=  new String[5];
+String[] X = {"a" ,"b"}
+
+to find the length  X.length (Not length()  no need to use () at end )
+
+Multidimensional Array
+
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int i = 0; i < myNumbers.length; ++i) {
+      for(int j = 0; j < myNumbers[i].length; ++j) {
+        System.out.println(myNumbers[i][j]);
+      }
+    }
+for each can be used for 2 dimensional array also
+
+int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
+    for (int[] x : myNumber) {
+      for(int y:x) {
+        System.out.println(y);
+      }
+    }
+
+STATIC method - means doesn't returns any value -  main is a static method (Doesn't want return statement )
+
+
+
+
+
+
+
+
+
