@@ -10,6 +10,8 @@ Final - final int x=10;
 
 the value is never changed  shows error when value is assigned
 
+The final keyword is called a "modifier"
+
 float f = 19.11f
 
 primitive data types(starting letter is always small)
@@ -170,6 +172,29 @@ int[][] myNumbers = { {1, 2, 3, 4}, {5, 6, 7} };
     }
 
 STATIC method - means doesn't returns any value -  main is a static method (Doesn't want return statement )
+
+Method Overloading 
+
+Method with same name  but different  type of parameters or no of parameters
+
+ Recursion - ( method call it's own method )-  function call itself
+
+ HALTING condition is the condition to start or stop the recursion 
+final
+  public static void main(String[] args) {
+    int result = sum(5, 10);
+    System.out.println(result);
+  }
+  public static int sum(int start, int end) {
+    if (end > start) {    //Halting condition 
+      return end + sum(start, end - 1);
+    } else {
+      return end;
+    }
+  }
+}
+
+
 
 
 

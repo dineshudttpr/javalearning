@@ -1,0 +1,147 @@
+OOPS Concept  - Object-Oriented Programming.  keep the Java code DRY "Don't Repeat Yourself"
+
+Class  , object ,Encapsulation ,Polymorphism , 
+
+CLASS is a template for objects  -BLUEPRINT 
+
+OBJECT is an instance of a class.
+
+We can create a object for main class too 
+
+public class Main {
+  int x = 5;
+
+  public static void main(String[] args) {
+    Main myObj = new Main(); //object for the main class to acess the variable 
+    System.out.println(myObj.x);
+  }
+}
+
+
+The final keyword is called a "modifier"
+
+Constructor - came name of the  class - run when object is created 
+
+synchronized -	Methods can only be accessed by one thread at a time
+
+https://www.w3schools.com/java/java_modifiers.asp -  need to check in this link 
+
+Static method inside  the calss can accessed directly without creating object (my  understanding - No need to create object , same object used all over the program code )
+
+Abstract method  - It is declared inside the abstract class no need to define just declaration is enough so that we can use extend keyword and use that method declared in abstract class
+
+abstract class Main {
+  public String fname = "John";
+  public int age = 24;
+  public abstract void study(); // abstract method
+}
+
+
+class Student extends Main {
+  public int graduationYear = 2018;
+  public void study() { // the body of the abstract method is provided here
+    System.out.println("Studying all day long");
+  }
+}
+
+Encapsulation,  - Data hiding -  "sensitive" data is hidden from users 
+
+Encapsulation - best Example - Getters and Setters
+
+Encapsulation Advantage 
+
+Better control of class attributes and methods
+Class attributes can be made read-only (if you only use the get method), or write-only (if you only use the set method)
+Flexible: the programmer can change one part of the code without affecting other parts (We can get the data and modify if needed or else variable value chnaged directly )
+Increased security of data
+
+
+Build in packages - use of packages (import statements are used to make use of the packages)
+
+The library contains components for managing input, database programming, and much much more. The complete list can be found at Oracles website: https://docs.oracle.com/javase/8/docs/api/
+
+import java.util.Scanner;  //import statement 
+
+class MyClass {
+  public static void main(String[] args) {
+    Scanner myObj = new Scanner(System.in);   //use of Scanner 
+    System.out.println("Enter username");
+
+    String userName = myObj.nextLine();    //to read the line  - get input from user 
+    System.out.println("Username is: " + userName);
+  }
+}
+
+
+User-defined Packages
+
+we can use our own packages too by declaring package name in the code at first line 
+packages abc //abc is package name 
+
+
+Compile the code by javac -d . MyPackage.java
+The -d keyword specifies the destination for where to save the class file. You can use any directory name, like c:/user (windows), or, if you want to keep the package within the same directory, you can use the dot sign ".", like in the example above.
+The package name should be written in lower case to avoid conflict with class names
+
+
+Inheritance - inherit  use of the  one class from other class -  Superclass ,Subclass -extend keyword
+
+when no need to inhert the calss can declared as final method
+Polymorphism  -  many forms  -  Same name of method  but different input parameters type or  no of parameter differs 
+
+Example of polymorphism and inheritance 
+
+
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {   // polymorphism of method when object is created as pig then this method is called 
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}  
+
+
+Java inner class use of the class insed a class 
+
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();    // object of outer class  . new  inner class
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+Inner private class cannot be access by creating object for first class 
+
+
+
+
